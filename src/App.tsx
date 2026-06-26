@@ -12,6 +12,16 @@ import RSVPForm from "./components/RSVPForm";
 import Footer from "./components/Footer";
 import InvitationModal from "./components/InvitationModal";
 
+// Import images so Vite processes and bundles them correctly
+import heroBg from "./assets/images/reconstruction_hero_bg_1780945821211.png";
+import ernany from "./assets/images/ernany_salatiel_1780945842030.jpeg";
+import edelson from "./assets/images/edelson_sales_1780945854156.jpeg";
+import nicolly from "./assets/images/nicolly_speaker_1780945866574.jpeg";
+import stael from "./assets/images/stael_richard_1780945881786.jpeg";
+import priscila from "./assets/images/priscila_farias_1780945894533.jpeg";
+import debora from "./assets/images/debora_barbosa_1780945908477.png";
+import geracaoEleita from "./assets/images/geracao_eleita_1780945921385.png";
+
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,16 +29,16 @@ export default function App() {
   const [showNotificationBadge, setShowNotificationBadge] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Asset image paths generated earlier
+  // Asset image paths using correct Vite bundled references
   const imagePaths = {
-    heroBg: "/src/assets/images/reconstruction_hero_bg_1780945821211.png",
-    ernany: "/src/assets/images/ernany_salatiel_1780945842030.jpeg",
-    edelson: "/src/assets/images/edelson_sales_1780945854156.jpeg",
-    nicolly: "/src/assets/images/nicolly_speaker_1780945866574.jpeg",
-    stael: "/src/assets/images/stael_richard_1780945881786.jpeg",
-    priscila: "/src/assets/images/priscila_farias_1780945894533.jpeg",
-    debora: "/src/assets/images/debora_barbosa_1780945908477.jpeg",
-    geracaoEleita: "/src/assets/images/geracao_eleita_1780945921385.png",
+    heroBg,
+    ernany,
+    edelson,
+    nicolly,
+    stael,
+    priscila,
+    debora,
+    geracaoEleita,
   };
 
   // Listen to scrolling to style Navigation bar dynamically
