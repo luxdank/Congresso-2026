@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Cinzel", serif;
+  --font-editorial: "Playfair Display", serif;
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f4edd0;
+  --color-gold-200: #e8da9f;
+  --color-gold-300: #d8c067;
+  --color-gold-400: #c9a43b;
+  --color-gold-500: #af8724;
+  --color-gold-600: #8c661b;
+  --color-gold-700: #6a4916;
+  --color-gold-800: #4b3211;
+  --color-gold-900: #2d1c0b;
+  --color-gold-950: #1b1005;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #050505;
+  color: #f3f3f3;
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2015;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #af8724;
+}
+
+/* Metallic text clipping or glowing keyframes */
+@keyframes gold-shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fef08a 0%, #eab308 40%, #c2410c 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shine 6s ease infinite;
+}
+
+.text-bronze-gradient {
+  background: linear-gradient(135deg, #f97316 0%, #ca8a04 50%, #7c2d12 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shine 8s ease infinite;
+}
+
+/* Sharp box shapes for brutalist / bold typography aesthetic */
+.theme-sharp-box {
+  border-radius: 2px !important;
+}
+
+/* Glowing backdrops */
+.glow-yellow-orb {
+  background: radial-gradient(circle, rgba(234, 179, 8, 0.15) 0%, rgba(234, 180, 8, 0) 70%);
+}
+
+.glow-orange-orb {
+  background: radial-gradient(circle, rgba(194, 65, 12, 0.15) 0%, rgba(194, 65, 12, 0) 70%);
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(135deg, #af8724, #1b1005, #e8da9f, #2d1c0b) 1;
+}
+
+/* Glow lines */
+.glow-gold {
+  box-shadow: 0 0 15px rgba(175, 135, 36, 0.3);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+.animate-float {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 8s ease-in-out infinite;
+}

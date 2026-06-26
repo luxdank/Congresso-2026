@@ -1,0 +1,6 @@
+{
+  "name": "Congresso Jovem 2K26",
+  "description": "Landing page premium e emocionante para o Congresso Jovem 2K26 da ADEVIP. Tema: Ano da Reconstrução.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
